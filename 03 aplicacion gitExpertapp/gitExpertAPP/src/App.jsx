@@ -2,11 +2,12 @@
 import { useState } from 'react'
 import './App.css'
 import AddCategory from './component/AddCategory'
+import GitGrid from './component/GitGrid'
 function GifExpertApp() {
  
-  const [categories, setCategories] = useState(['One Punch',"goku"])
-  
+  const [categories, setCategories] = useState(['One Punch'])
   const onAddCategory = (newCategory) => {
+    if (categories.includes(newCategory)) return
     console.log(newCategory) 
     setCategories([newCategory,...categories])
   }
@@ -16,16 +17,11 @@ function GifExpertApp() {
   return (
     <>
      <h1>GitExpert</h1>  
-      <AddCategory  
-        onNewCategory={value=>onAddCategory(value)}
-     
-      />
-      
-     <ol>
+      <AddCategory   onNewCategory={value=>onAddCategory(value)}/>     
       {categories.map((category) => {
-        return <li key={category}>{category}</li>
+        return <GitGrid key={category} category={category} />
       })}
-     </ol>
+    
     
     </>
   )
