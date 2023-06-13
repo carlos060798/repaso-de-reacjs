@@ -1,4 +1,5 @@
  import { useEffect, useState } from "react";
+ import PropTypes from "prop-types";
  import GifItem from "./GifItem";
 import useFetchGits from "../hooks/useFetchGits";
 
@@ -29,3 +30,7 @@ const {Images, isLoading}= useFetchGits(category)
 }
 
 export default GitGrid;
+
+GitGrid.propTypes ={
+ category: PropTypes.string.isRequired,
+}

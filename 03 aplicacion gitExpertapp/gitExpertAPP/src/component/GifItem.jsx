@@ -1,4 +1,5 @@
-function GitItem({title, url,id}) {
+import PropTypes from 'prop-types';
+ export default function GitItem({title, url,id}) {
    
     return (<>
     <div className="card">
@@ -10,4 +11,7 @@ function GitItem({title, url,id}) {
     </>  );
 }
 
-export default GitItem;
+GitItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+}
