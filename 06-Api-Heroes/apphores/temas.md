@@ -13,3 +13,6 @@
     QueryParams
 
     Aplicar filtros utilizando QueryStrings
+
+   # para instalar   QueryStrings
+    npm i query-string
