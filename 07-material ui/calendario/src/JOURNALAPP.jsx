@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import AppRouter from "./route/appRouter";
+
 
 function App() {
-
   return (
     <>
-     <h1>comet</h1>
+      
+        <AppRouter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
