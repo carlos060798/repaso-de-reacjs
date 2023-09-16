@@ -1,6 +1,8 @@
+import { Typography } from "@mui/material";
+
 function JournalPage() {
-    return (<>
-      <h1>CALENDANRIO</h1>
+    return (<> 
+    <Typography variant="h1" >Journal Page</Typography>
     </>  );
 }
 
