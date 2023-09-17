@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/contex/AuthContext";
+import { useContext } from "react";
 
 function Login() {
+    const {login}=useContext(AuthContext)
     const  navigate=useNavigate()
 
     const onLoginApp=()=>{
+        login("carlos")
      navigate('/Marvel', { replace: true }  );
     }
  

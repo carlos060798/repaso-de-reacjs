@@ -1,9 +1,9 @@
 import { Route, Routes,Navigate } from "react-router-dom";
-import { Navbar } from "../componet/Navar";
-import MarvelPages from "../heroues/pages/Marvel";
-import DcPages from "../heroues/pages/Dc";
-import Hero from "../heroues/pages/Hero";
-import Search from "../heroues/pages/Search";
+import { Navbar } from "../../componet/Navar";
+import MarvelPages from "../pages/Marvel";
+import DcPages from "../pages/Dc";
+import Hero from "../pages/Hero";
+import Search from "../pages/Search";
 
 function HeroesRouter() {
     return (<>
