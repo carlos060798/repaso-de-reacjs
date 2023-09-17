@@ -1,21 +1,31 @@
-import { Box } from "@mui/material";
-import Navbar from "../component/Navbar";
+import { Toolbar } from '@mui/material';
+import { Box } from '@mui/system'
+import NavBar from '../component/Navbar';
+import SideBar from '../component/Saibar';
 
-// varible de with 
 
-const drawerWith= 240;
+const drawerWidth = 280;
 
-function LayautJournal({children}) {
-    return ( <> 
-     <Box sx={{ display: 'flex' }}>
-        <Navbar  drawerWith={drawerWith}/>
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-            {/*nabar */} 
-            {children}
+function  JournalLayout ({ children })  {
+  return (
+    <Box sx={{ display: 'flex' }}>
+
+        <NavBar drawerWidth={ drawerWidth } />
+
+        <SideBar drawerWidth={ drawerWidth } />
+
+        <Box 
+            component='main'
+            sx={{ flexGrow: 1, p: 3 }}
+        >
+            <Toolbar />
+
+            { children }
+            
         </Box>
     </Box>
-    
-    </> );
+  )
 }
 
-export default LayautJournal;
+
+export default JournalLayout;
